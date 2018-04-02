@@ -1,0 +1,9 @@
+
+<%= "Are you sure you want to delete #{@streak.title}? All data will be permanently removed." %>
+<br>
+<%= form_for(@streak, :method => 'delete') do |f| %> 
+  <%= f.submit("Yes, delete my streak!")  %>
+<% end %>
+<br>
+<%= link_to "I've change my mind, take me back!", "/streaks/#{@streak.id}" %>
+<%=  %>

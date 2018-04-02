@@ -25,4 +25,15 @@ class StreaksController < ApplicationController
     redirect_to '/'
   end
 
+  def delete
+    @streak = Streak.find(params[:id])
+    render 'streaks/delete'
+  end
+
+  def destroy    
+    @streak = Streak.find(params[:id])
+    @streak.destroy
+    redirect_to '/'
+  end
+
 end
