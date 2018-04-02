@@ -15,5 +15,8 @@ Rails.application.routes.draw do
 
   get '/streaks/:id', to: 'chains#index', as: 'streak'
 
+  get '/streaks/:id/delete', to: 'streaks#delete'
+
+  delete '/streaks/:id', to: 'streaks#destroy'
 
 end
