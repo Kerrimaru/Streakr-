@@ -15,6 +15,7 @@ class StreaksController < ApplicationController
     if @new_streak.save
       redirect_to '/'
     else
+      @message = "Please fill in all the fields"
       render 'streaks/index'
     end
   end
