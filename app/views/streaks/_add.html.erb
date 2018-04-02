@@ -1,5 +1,6 @@
 <h2>Add new streak:</h2>
 <br>
+<h3><%= @message %></h3>
 <p>Every day I</p>
 <%= form_for @new_streak, url: '/streaks'  do |f| %>
     <%= f.label :aim %>
